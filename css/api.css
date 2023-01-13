@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@1&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman', Times, ;
+}
+:root {
+ --primary:  rgb(1, 1, 55)  
+}
+.nav-bar {
+    background-color: var(--primary);
+    color: white;
+    display: grid;
+    height: 10vh;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nav-items a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+
+}
+
+.nav-items a::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+} 
+
+.nav-items a:hover::after{
+    transform: scaleX(1);
+}
+
+.fetch-post{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+#fetch-post-btn {
+   margin: 20px 20px 20px 0;
+   padding: 5px 20px;
+   border: 2px solid var(--primary);
+   border-radius: 5px;
+   background-color: white;
+   cursor: pointer;
+   color:var(--primary)
+}
+    
+.table-container{
+    position: relative;
+    height: 400px;
+   width: 100vw; 
+   color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0px 0px 20px;
+}
+.main-table{
+ display: flex;
+ margin: 0 10px;
+ justify-content: space-evenly;
+}
+
+
+
+table, thead, th{
+border: 1px solid black;
+border-collapse: collapse;
+padding: 20px;
+background-color: var(--primary);
+}
+
+td {
+    background-color: #fff;
+    color: rgb(1, 1, 55) ;
+    border: 1px solid var(--primary);
+    border-collapse: collapse;
+    padding: 0px 10px;
+
+}
+td > button {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 3px;
+    margin: 3px;
+}
+
+.myform {
+    max-width: 20%;
+    height: 80%;
+    padding: 10px;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    box-shadow: black 1px 1px 2px 2px;
+    
+}
+
+.done-reading{
+    padding: 5px 15px;
+    margin: 5px 10px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+.myform2 {
+    margin: 0 20px;
+    max-width: 20%;
+    height: 80%;
+    padding: 5px 10px;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    box-shadow: black 1px 1px 2px 2px;
+}
+.myform2 label{
+    display: flex;
+    align-items: flex-start;
+    font-weight: 800;
+}
+.myform2 input, textarea{
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.myform2 input:focus, textarea:focus{
+    outline: 2px solid black ;
+
+}
+
+.myform2 .submit {
+    padding: 5px 15px;
+    color: #fff;
+    background: var(--primary);
+    border-radius: 3px;
+}
+
+.message {
+    height: 30px;
+    width: 51%;
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    text-align: center;
+}
+
+footer {
+    background-color:var(--primary);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: hidden;
+    padding: 1em 0rem;
+}
+
+.contact {
+    padding: 10px 5px 0;
+}
+
+.contact i {
+    text-decoration: none;
+    color: rgb(114, 83, 3);
+    padding: 5px;
+}
+
+
+@media  (max-width: 658px) {
+    .nav-bar {
+        display: flex;
+        justify-content: center;
+    }
+    .nav-items {
+        font-size: 30px;
+    }
+    .nav-items .item2{
+        display: none;
+    }
+     
+    .fetch-post{
+        height: 10vh;
+    }
+        
+    .table-container{
+        height: 800px;
+    }
+    .main-table{
+     flex-direction: column-reverse;
+     margin: 5px 20px;
+     justify-content: space-around;
+    }
+    
+    table, thead, th{
+    padding: 10px;
+    font-size: 14px;
+    }
+    
+    td {
+        padding: 10px 5px;
+    }
+    td > button {
+        font-size: 10px;
+        padding: 3px;
+        margin: 2px 0px;
+    }
+    
+    .myform {
+        max-width: 100%;
+        height: 40%;
+        padding: 10px;
+        margin-bottom: 10px;   
+    }
+
+    .myform2 {
+        max-width: 100%;
+        height: 30%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .myform2 input {
+        padding: 5px;
+        margin-bottom: 5px;
+        height: 10%;
+    }
+    .myform2 textarea{
+        padding: 5px;
+        margin-bottom: 5px;
+        height: 20%;   
+    }
+     
+    .message {
+        width: 90%;
+    }
+    
+    
+}
+
+
+@media only screen and (min-width: 659px) and (max-width: 920px) {
+    
+    #fetch-post-btn {
+        width: 20%;
+        font-weight: 800;
+        font-size: 1rem;
+    }
+        
+    .table-container{
+        position: relative;
+        height: 700px;
+       margin: 0px 0px 20px;
+    }
+
+    .main-table{
+     display: flex;
+     margin: 20px 10px;
+     justify-content: space-evenly;
+    }
+    
+    
+    
+    table, thead, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+    background-color: var(--primary);
+    }
+    
+    td {
+        padding: 10px 5px;
+        font-size: 20px;
+    
+    }
+    td > button {
+        background-color: var(--primary);
+        color: #fff;
+        padding: 3px;
+        margin: 0px;
+    }
+    
+    .myform {
+        max-width: 20%;
+        height: 60%;
+        
+    }
+    
+    .done-reading{
+        padding: 5px 15px;
+        margin: 5px 10px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: var(--primary);
+        cursor: pointer;
+    }
+    .myform2 {
+        margin: 0 20px;
+        max-width: 20%;
+        height: 50%;
+        padding: 5px 10px;
+        /* display: flex;
+        justify-content: center; */
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+        color: black;
+        box-shadow: black 1px 1px 2px 2px;
+    }
+    
+    .myform2 textarea{
+        padding: 5px;
+        margin-bottom: 5px;
+        height: 30%;   
+    }
+    
+
+    .message {
+        height: 30px;
+        width: 90%;
+        padding: 5px 10px;
+        background-color: green;
+        color: white;
+        border: 1px solid green;
+        text-align: center;
+    }
+    
+    footer {
+        height: 15vh;
+        font-size: 20px;
+    }
+    
+    
+}
+
+    
+
+@media (max-width: 280px) {
+    .nav-bar {
+        display: flex;
+        justify-content: center;
+    }
+    .nav-items {
+        font-size: 30px;
+    }
+    .nav-items .item2{
+        display: none;
+    }
+     
+    .fetch-post{
+        height: 10vh;
+    }
+        
+    .table-container{
+        height: 1000px;
+    }
+    .main-table{
+     flex-direction: column-reverse;
+     margin: 5px 20px;
+     justify-content: space-around;
+    }
+    
+    table, thead, th{
+    padding: 10px;
+    font-size: 14px;
+    }
+    
+    td {
+        padding: 10px 5px;
+    }
+    td > button {
+        background-color: var(--primary);
+        color: #fff;
+        font-size: 10px;
+        padding: 3px;
+        margin: 2px 0px;
+    }
+    
+    .myform {
+        max-width: 100%;
+        height: 30%;
+        padding: 10px;
+        margin-bottom: 10px;   
+    }
+
+    .myform2 {
+        max-width: 100%;
+        height: 25%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .myform2 input {
+        padding: 5px;
+        margin-bottom: 5px;
+        height: 10%;
+    }
+    .myform2 textarea{
+        padding: 5px;
+        margin-bottom: 5px;
+        height: 20%;   
+    }
+     
+    .message {
+        width: 80%;
+    }
+    
+    
+}
