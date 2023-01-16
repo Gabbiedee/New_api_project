@@ -198,6 +198,9 @@ footer {
 }
 
 
+
+
+/* @media  (max-width: 658px)  */
 @media  (max-width: 658px) {
     .nav-bar {
         display: flex;
@@ -215,7 +218,7 @@ footer {
     }
         
     .table-container{
-        height: 800px;
+        height: 900px;
     }
     .main-table{
      flex-direction: column-reverse;
@@ -269,6 +272,8 @@ footer {
 }
 
 
+
+/* @media only screen and (min-width: 659px) and (max-width: 920px) */
 @media only screen and (min-width: 659px) and (max-width: 920px) {
     
     #fetch-post-btn {
@@ -279,8 +284,9 @@ footer {
         
     .table-container{
         position: relative;
-        height: 700px;
-       margin: 0px 0px 20px;
+        height: 800px;
+        
+
     }
 
     .main-table{
@@ -329,13 +335,6 @@ footer {
         max-width: 20%;
         height: 50%;
         padding: 5px 10px;
-        /* display: flex;
-        justify-content: center; */
-        text-align: center;
-        border: none;
-        border-radius: 3px;
-        color: black;
-        box-shadow: black 1px 1px 2px 2px;
     }
     
     .myform2 textarea{
@@ -363,7 +362,10 @@ footer {
     
 }
 
-    
+   
+
+
+/* @media (max-width: 280px) */
 
 @media (max-width: 280px) {
     .nav-bar {
@@ -383,6 +385,7 @@ footer {
         
     .table-container{
         height: 1000px;
+        margin-bottom: 20px;
     }
     .main-table{
      flex-direction: column-reverse;

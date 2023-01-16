@@ -38,6 +38,8 @@ async function myPost() {
 // fetch data function
 async function readPost(postid){
 
+
+
     const newPost = endpoint + "/" + postid;
 
     const data = await fetch(newPost);
@@ -62,23 +64,24 @@ async function readPost(postid){
     }
    })
 }
-
+   
 async function updatePost(postid){
-
     const newPost = endpoint + "/" + postid;
 
     const data = await fetch(newPost);
 
     const newData = await data.json();
 
+    
+
     const form2 = document.createElement('form');
     form2.className = 'myform2'
     form2.innerHTML = `<h2>${newData.id}</h2> <br>
     <hr> <br>
     <label>Title</label>
-    <input type="text">
+    <input type="text" value="${newData.title}">
     <label>Body</label>
-    <textarea name="" id="" rows="7"></textarea>
+    <textarea name="" id="" rows="7">${newData.body}</textarea>
     <button class="submit">Submit</button>`
     mainTable.appendChild(form2);
 
@@ -97,6 +100,7 @@ async function updatePost(postid){
        }, 3000);
     }
    })
+//    removeModal(form2);
 }
 
 
@@ -117,4 +121,8 @@ function setMessage (msg, color) {
     message.textContent = msg;
     message.style.color = color;
     // message.style.textAlign = 'center';
+}
+
+function removeModal (modal) {
+    modal.style.display = 'none'
 }
